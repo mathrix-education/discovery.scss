@@ -62,3 +62,5 @@ jobs:
         run: npm run build ${{ needs.mappings.outputs.semver }}
       - name: Publish package to GitHub Registry
         run: npm run publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

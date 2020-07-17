@@ -1,0 +1,38 @@
+{
+  "name": "@mathrix-education/discovery.scss",
+  "version": "0.1.0",
+  "description": "Base style for Mathrix Education (codename: Discovery)",
+  "keywords": [
+    "education",
+    "style",
+    "scss"
+  ],
+  "homepage": "https://github.com/mathrix-education/discovery.scss#readme",
+  "bugs": {
+    "url": "https://github.com/mathrix-education/discovery.scss/issues",
+    "email": "mathieu@mathrix.fr"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "maintainers": [
+    "Dimitri Bret <dimitri@mathrix.fr> (https://github.com/dimitri-bret)",
+    "Mathieu Bour <mathieu@mathrix.fr> (https://github.com/mathieu-bour)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathrix-education/discovery.scss.git"
+  },
+  "scripts": {
+    "lint": "echo \"Lint skipped\"",
+    "build": ".github/scripts/build.sh",
+    "publish": "npm publish ./dist"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "devDependencies": {
+    "stylelint": "^13.6.1",
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "stylelint-config-standard": "^20.0.0"
+  },
+  "dependencies": {}
+}

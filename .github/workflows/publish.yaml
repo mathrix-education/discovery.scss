@@ -13,8 +13,8 @@ jobs:
     name: Generate mappings
     runs-on: ubuntu-latest
     outputs:
-      version: ${{ steps.mappings.outputs.semver }}
       semver: ${{ steps.mappings.outputs.semver }}
+      semver_dev: ${{ steps.mappings.outputs.semver_dev }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -56,13 +56,12 @@ jobs:
         uses: actions/checkout@v2
       - name: Build stable package
         if: startsWith(github.ref, 'refs/tags/')
-        run: .github/scripts/build.sh "${{ needs.mappings.outputs.version }}"
+        run: .github/scripts/build.sh "${{ needs.mappings.outputs.semver }}"
       - name: Build development package
         if: github.ref == 'refs/heads/main'
-        run: .github/scripts/build.sh "${{ needs.mappings.outputs.semver }}"
+        run: .github/scripts/build.sh "${{ needs.mappings.outputs.semver_dev }}"
       - name: Publish package to GitHub Registry
         run: |
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GH_TOKEN }}" > ~/.npmrc
           cd ./dist
-          cat package.json
           npm publish

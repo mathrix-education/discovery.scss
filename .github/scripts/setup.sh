@@ -18,7 +18,8 @@ short_sha=${sha:0:7}
 version=$(jq -r .version < "$root/../../package.json")
 counter="${GITHUB_RUN_NUMBER:-0000}"
 semver="$version+$counter.$short_sha"
+semver_dev="$version-dev.$counter+$counter.$short_sha"
 
 # Outputs
-set_output "version" "$version"
 set_output "semver" "$semver"
+set_output "semver_dev" "$semver_dev"

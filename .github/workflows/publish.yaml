@@ -61,6 +61,6 @@ jobs:
         if: github.ref == 'refs/heads/main'
         run: npm run build ${{ needs.mappings.outputs.semver }}
       - name: Publish package to GitHub Registry
-        run: npm run publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+        run: |
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.DEPLOY_TOKEN }}" > ~/.npmrc
+          npm run publish

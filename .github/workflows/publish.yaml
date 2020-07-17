@@ -64,4 +64,5 @@ jobs:
         run: |
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GH_TOKEN }}" > ~/.npmrc
           cd ./dist
+          cat package.json
           npm publish

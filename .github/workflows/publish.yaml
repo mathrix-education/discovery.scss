@@ -62,5 +62,5 @@ jobs:
         run: npm run build ${{ needs.mappings.outputs.semver }}
       - name: Publish package to GitHub Registry
         run: |
-          echo "//npm.pkg.github.com/:_authToken=${{ secrets.DEPLOY_TOKEN }}" > ~/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GH_TOKEN }}" > ~/.npmrc
           npm run publish

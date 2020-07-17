@@ -49,6 +49,7 @@ jobs:
     name: Publish package on GitHub Registry
     if: github.event_name == 'push'
     needs: [mappings, lint]
+    steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build stable package

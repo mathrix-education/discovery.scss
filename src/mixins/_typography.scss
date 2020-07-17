@@ -1,0 +1,35 @@
+@import "fonts";
+
+@mixin body() {
+  @include open-sans(1rem, 1.4rem);
+}
+
+@mixin h1() {
+  @include poppins-bold(2.25rem, 3rem, $letter-spacing-standard);
+}
+
+@mixin h2() {
+  @include poppins-bold(1.5rem, 2.1rem, $letter-spacing-standard);
+}
+
+@mixin h3() {
+  @include poppins-bold(1.25rem, 1.75rem, $letter-spacing-standard);
+}
+
+@mixin h4() {
+  @include poppins-bold(1rem, 1.4rem, $letter-spacing-small);
+}
+
+@mixin body-bold() {
+  @include body();
+  font-weight: bold;
+}
+
+@mixin tiny() {
+  @include open-sans(0.85rem, 1.3rem);
+}
+
+@mixin tiny-bold() {
+  @include tiny();
+  font-weight: bold;
+}

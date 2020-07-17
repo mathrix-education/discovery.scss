@@ -1,0 +1,14 @@
+@import "../mixins/fonts";
+@import "../mixins/borders";
+@import "../mixins/paddings";
+@import "../variables/misc";
+
+.mtx-btn {
+  display: inline-block;
+  cursor: pointer;
+  @include poppins(14px, 24px, $letter-spacing-small);
+  @include border-radius(1);
+  transition: $transition;
+  @include padding-y(1);
+  @include padding-x(4);
+}

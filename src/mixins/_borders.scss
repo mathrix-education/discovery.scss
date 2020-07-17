@@ -1,0 +1,46 @@
+@import "../variables/borders";
+
+@mixin border-radius($i) {
+  border-radius: $i*$base-border-radius !important;
+}
+
+@mixin border-top-left-radius($i) {
+  border-top-left-radius: $i*$base-border-radius !important;
+}
+
+@mixin border-top-right-radius($i) {
+  border-top-right-radius: $i*$base-border-radius !important;
+}
+
+@mixin border-bottom-left-radius($i) {
+  border-bottom-left-radius: $i*$base-border-radius !important;
+}
+
+@mixin border-bottom-right-radius($i) {
+  border-bottom-right-radius: $i*$base-border-radius !important;
+}
+
+
+@mixin border-bottom-radius($i) {
+  @include border-bottom-left-radius($i);
+  @include border-bottom-right-radius($i);
+}
+
+@mixin border-top-radius($i) {
+  @include border-top-left-radius($i);
+  @include border-top-right-radius($i);
+}
+
+@mixin border-left-radius($i) {
+  @include border-top-left-radius($i);
+  @include border-bottom-left-radius($i);
+}
+
+@mixin border-right-radius($i) {
+  @include border-top-right-radius($i);
+  @include border-bottom-right-radius($i);
+}
+
+@mixin border-radius-round {
+  border-radius: 9999px;
+}

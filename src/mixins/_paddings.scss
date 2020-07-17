@@ -1,0 +1,31 @@
+@import '../variables/misc';
+
+@mixin padding($i) {
+  padding: $i * $base-space !important;
+}
+
+@mixin padding-top($i) {
+  padding-top: $i * $base-space !important;
+}
+
+@mixin padding-bottom($i) {
+  padding-bottom: $i * $base-space !important;
+}
+
+@mixin padding-left($i) {
+  padding-left: $i * $base-space !important;
+}
+
+@mixin padding-right($i) {
+  padding-right: $i * $base-space !important;
+}
+
+@mixin padding-y($i) {
+  @include padding-top($i);
+  @include padding-bottom($i);
+}
+
+@mixin padding-x($i) {
+  @include padding-left($i);
+  @include padding-right($i);
+}

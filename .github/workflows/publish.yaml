@@ -56,10 +56,10 @@ jobs:
         uses: actions/checkout@v2
       - name: Build stable package
         if: startsWith(github.ref, 'refs/tags/')
-        run: npm run build -- ${{ needs.mappings.outputs.version }}
+        run: .github/scripts/build.sh "${{ needs.mappings.outputs.version }}"
       - name: Build development package
         if: github.ref == 'refs/heads/main'
-        run: npm run build -- ${{ needs.mappings.outputs.semver }}
+        run: .github/scripts/build.sh "${{ needs.mappings.outputs.semver }}"
       - name: Publish package to GitHub Registry
         run: |
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GH_TOKEN }}" > ~/.npmrc

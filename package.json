@@ -22,9 +22,7 @@
     "url": "git+https://github.com/mathrix-education/discovery.scss.git"
   },
   "scripts": {
-    "lint": "echo \"Lint skipped\"",
-    "build": ".github/scripts/build.sh",
-    "publish": "npm publish ./dist"
+    "lint": "echo \"Lint skipped\""
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"

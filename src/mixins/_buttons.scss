@@ -4,30 +4,32 @@
 
 @mixin mtx-btn-variant(
   $name,
-  $background-color,
   $color: $font-black,
+  $background-color,
   $border-color: $background-color,
-  $background-color-active: $background-color,
   $color-active: $color,
+  $background-color-active: $background-color,
   $border-color-active: $border-color,
-  $background-color-disabled: $gray-title-disabled,
   $color-disabled: $gray-disabled,
+  $background-color-disabled: $gray-title-disabled,
   $border-color-disabled: $gray-disabled,
 ) {
   .mtx-btn.mtx-btn-#{$name} {
+    color: $color;
     background-color: $background-color;
     border: 1px solid $border-color;
     transition: $transition;
 
     &:hover, &:active {
+      color: $color-active;
       background-color: $background-color-active;
       border: 1px solid $border-color-active;
     }
 
     &:disabled {
-      color: $gray-title-disabled;
-      background-color: $gray-disabled;
-      border-color: $gray-disabled;
+      color: $color-disabled;
+      background-color: $background-color-disabled;
+      border-color: $border-color-disabled;
     }
 
     &:focus {

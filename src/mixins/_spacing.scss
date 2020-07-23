@@ -6,41 +6,41 @@
  */
 @mixin margin($i, $important: false) {
   @if $important {
-    margin: pow($base-space, $i) !important;
+    margin: $base-space * pow(2, $i - 1) !important;
   } @else {
-    margin: pow($base-space, $i);
+    margin: $base-space * pow(2, $i - 1);
   }
 }
 
 @mixin margin-top($i, $important: false) {
   @if $important {
-    margin-top: pow($base-space, $i) !important;
+    margin-top: $base-space * pow(2, $i - 1) !important;
   } @else {
-    margin-top: pow($base-space, $i);
+    margin-top: $base-space * pow(2, $i - 1);
   }
 }
 
 @mixin margin-bottom($i, $important: false) {
   @if $important {
-    margin-top: pow($base-space, $i) !important;
+    margin-top: $base-space * pow(2, $i - 1) !important;
   } @else {
-    margin-top: pow($base-space, $i);
+    margin-top: $base-space * pow(2, $i - 1);
   }
 }
 
 @mixin margin-left($i, $important: false) {
   @if $important {
-    margin-left: pow($base-space, $i) !important
+    margin-left: $base-space * pow(2, $i - 1) !important
   } @else {
-    margin-left: pow($base-space, $i);
+    margin-left: $base-space * pow(2, $i - 1);
   }
 }
 
 @mixin margin-right($i, $important: false) {
   @if $important {
-    margin-right: pow($base-space, $i) !important;
+    margin-right: $base-space * pow(2, $i - 1) !important;
   } @else {
-    margin-right: pow($base-space, $i);
+    margin-right: $base-space * pow(2, $i - 1);
   }
 }
 
@@ -82,41 +82,41 @@
  */
 @mixin padding($i, $important: false) {
   @if $important {
-    padding: pow($base-space, $i) !important;
+    padding: $base-space * pow(2, $i - 1) !important;
   } @else {
-    padding: pow($base-space, $i);
+    padding: $base-space * pow(2, $i - 1);
   }
 }
 
 @mixin padding-top($i, $important: false) {
   @if $important {
-    padding-top: pow($base-space, $i) !important;
+    padding-top: $base-space * pow(2, $i - 1) !important;
   } @else {
-    padding-top: pow($base-space, $i);
+    padding-top: $base-space * pow(2, $i - 1);
   }
 }
 
 @mixin padding-bottom($i, $important: false) {
   @if $important {
-    padding-top: pow($base-space, $i) !important;
+    padding-top: $base-space * pow(2, $i - 1) !important;
   } @else {
-    padding-top: pow($base-space, $i);
+    padding-top: $base-space * pow(2, $i - 1);
   }
 }
 
 @mixin padding-left($i, $important: false) {
   @if $important {
-    padding-left: pow($base-space, $i) !important
+    padding-left: $base-space * pow(2, $i - 1) !important
   } @else {
-    padding-left: pow($base-space, $i);
+    padding-left: $base-space * pow(2, $i - 1);
   }
 }
 
 @mixin padding-right($i, $important: false) {
   @if $important {
-    padding-right: pow($base-space, $i) !important;
+    padding-right: $base-space * pow(2, $i - 1) !important;
   } @else {
-    padding-right: pow($base-space, $i);
+    padding-right: $base-space * pow(2, $i - 1);
   }
 }
 

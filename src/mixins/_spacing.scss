@@ -30,9 +30,9 @@
 
 @mixin margin-bottom($i: 1, $important: false) {
   @if $important {
-    margin-top: spacing($i) !important;
+    margin-bottom: spacing($i) !important;
   } @else {
-    margin-top: spacing($i);
+    margin-bottom: spacing($i);
   }
 }
 
@@ -106,9 +106,9 @@
 
 @mixin padding-bottom($i: 1, $important: false) {
   @if $important {
-    padding-top: spacing($i) !important;
+    padding-bottom: spacing($i) !important;
   } @else {
-    padding-top: spacing($i);
+    padding-bottom: spacing($i);
   }
 }
 

@@ -1,55 +1,63 @@
 @import '../variables/bases';
 @import 'math';
 
+@function spacing($i: 1) {
+  @if $i == 0 {
+    @return 0;
+  } @else {
+    @return $base-space * pow(2, $i);
+  }
+}
+
 /**
  * Margin mixins
  */
-@mixin margin($i, $important: false) {
+@mixin margin($i: 1, $important: false) {
   @if $important {
-    margin: $base-space * pow(2, $i - 1) !important;
+    margin: spacing($i) !important;
   } @else {
-    margin: $base-space * pow(2, $i - 1);
+    margin: spacing($i);
   }
 }
 
-@mixin margin-top($i, $important: false) {
+@mixin margin-top($i: 1, $important: false) {
   @if $important {
-    margin-top: $base-space * pow(2, $i - 1) !important;
+    margin-top: spacing($i) !important;
   } @else {
-    margin-top: $base-space * pow(2, $i - 1);
+    margin-top: spacing($i);
   }
 }
 
-@mixin margin-bottom($i, $important: false) {
+@mixin margin-bottom($i: 1, $important: false) {
   @if $important {
-    margin-top: $base-space * pow(2, $i - 1) !important;
+    margin-top: spacing($i) !important;
   } @else {
-    margin-top: $base-space * pow(2, $i - 1);
+    margin-top: spacing($i);
   }
 }
 
-@mixin margin-left($i, $important: false) {
+@mixin margin-left($i: 1, $important: false) {
   @if $important {
-    margin-left: $base-space * pow(2, $i - 1) !important
+    margin-left: spacing($i) !important
   } @else {
-    margin-left: $base-space * pow(2, $i - 1);
+    margin-left: spacing($i);
   }
 }
 
-@mixin margin-right($i, $important: false) {
+@mixin margin-right($i: 1, $important: false) {
   @if $important {
-    margin-right: $base-space * pow(2, $i - 1) !important;
+    margin-right: spacing($i) !important;
   } @else {
-    margin-right: $base-space * pow(2, $i - 1);
+    margin-right: spacing($i);
   }
 }
 
-@mixin margin-y($i, $important: false) {
+@mixin margin-y($i: 1, $important: false) {
   @include margin-top($i, $important);
   @include margin-bottom($i, $important);
 }
 
-@mixin margin-x($i, $important: false) {
+@mixin margin-x($i: 1, $important: false) {
   @include margin-left($i, $important);
   @include margin-right($i, $important);
 }
@@ -80,52 +88,52 @@
 /**
  * Padding mixins
  */
-@mixin padding($i, $important: false) {
+@mixin padding($i: 1, $important: false) {
   @if $important {
-    padding: $base-space * pow(2, $i - 1) !important;
+    padding: spacing($i) !important;
   } @else {
-    padding: $base-space * pow(2, $i - 1);
+    padding: spacing($i);
   }
 }
 
-@mixin padding-top($i, $important: false) {
+@mixin padding-top($i: 1, $important: false) {
   @if $important {
-    padding-top: $base-space * pow(2, $i - 1) !important;
+    padding-top: spacing($i) !important;
   } @else {
-    padding-top: $base-space * pow(2, $i - 1);
+    padding-top: spacing($i);
   }
 }
 
-@mixin padding-bottom($i, $important: false) {
+@mixin padding-bottom($i: 1, $important: false) {
   @if $important {
-    padding-top: $base-space * pow(2, $i - 1) !important;
+    padding-top: spacing($i) !important;
   } @else {
-    padding-top: $base-space * pow(2, $i - 1);
+    padding-top: spacing($i);
   }
 }
 
-@mixin padding-left($i, $important: false) {
+@mixin padding-left($i: 1, $important: false) {
   @if $important {
-    padding-left: $base-space * pow(2, $i - 1) !important
+    padding-left: spacing($i) !important
   } @else {
-    padding-left: $base-space * pow(2, $i - 1);
+    padding-left: spacing($i);
   }
 }
 
-@mixin padding-right($i, $important: false) {
+@mixin padding-right($i: 1, $important: false) {
   @if $important {
-    padding-right: $base-space * pow(2, $i - 1) !important;
+    padding-right: spacing($i) !important;
   } @else {
-    padding-right: $base-space * pow(2, $i - 1);
+    padding-right: spacing($i);
   }
 }
 
-@mixin padding-y($i, $important: false) {
+@mixin padding-y($i: 1, $important: false) {
   @include padding-top($i, $important);
   @include padding-bottom($i, $important);
 }
 
-@mixin padding-x($i, $important: false) {
+@mixin padding-x($i: 1, $important: false) {
   @include padding-left($i, $important);
   @include padding-right($i, $important);
 }

@@ -9,6 +9,6 @@
   @include poppins(14px, 24px, $letter-spacing-small);
   @include border-radius(1);
   transition: $transition;
-  @include padding-y(1);
-  @include padding-x(3);
+  @include padding-y(2);
+  @include padding-x(4);
 }

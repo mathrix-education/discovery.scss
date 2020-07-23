@@ -2,7 +2,7 @@
 @import '../variables/bases';
 @import 'spacing';
 
-@mixin mtx-btn-variant(
+@mixin btn-variant(
   $name,
   $color: $font-black,
   $background-color,
@@ -14,7 +14,7 @@
   $background-color-disabled: $gray-title-disabled,
   $border-color-disabled: $gray-disabled,
 ) {
-  .mtx-btn.mtx-btn-#{$name} {
+  .btn.btn-#{$name} {
     color: $color;
     background-color: $background-color;
     border: 1px solid $border-color;
@@ -33,7 +33,7 @@
     }
 
     &:focus {
-      border: 2px solid $border-color-active;
+      border-color: $border-color-active;
     }
   }
 }

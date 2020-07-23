@@ -1,59 +1,75 @@
 @import '../variables/typography';
 
-@mixin open-sans($font-size: 1rem, $line-height: $line-height-standard, $letter-spacing: $letter-spacing-small) {
+@mixin open-sans-light {
   font-family: 'Open Sans', sans-serif;
-  font-size: $font-size;
   font-weight: 300;
-  line-height: $line-height;
-  letter-spacing: $letter-spacing;
+  line-height: $line-height-standard;
+  letter-spacing: $letter-spacing-standard;
 }
 
-@mixin poppins($font-size: 1rem, $line-height: $line-height-standard, $letter-spacing: $letter-spacing-standard) {
+@mixin poppins {
   font-family: 'Poppins', sans-serif;
-  font-size: $font-size;
   font-weight: 400;
-  line-height: $line-height;
-  letter-spacing: $letter-spacing;
+  line-height: $line-height-standard;
+  letter-spacing: $letter-spacing-standard;
 }
 
-@mixin poppins-bold($font-size: 1rem, $line-height: $line-height-standard, $letter-spacing: $letter-spacing-standard) {
+@mixin poppins-medium {
   font-family: 'Poppins', sans-serif;
-  font-size: $font-size;
+  font-weight: 500;
+  line-height: $line-height-standard;
+  letter-spacing: $letter-spacing-standard;
+}
+
+@mixin poppins-semi-bold {
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  line-height: $line-height;
-  letter-spacing: $letter-spacing;
+  line-height: $line-height-standard;
+  letter-spacing: $letter-spacing-standard;
 }
 
-@mixin body() {
-  @include open-sans(1rem, 1.4rem);
+@mixin body {
+  @include open-sans-light;
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
-@mixin h1() {
-  @include poppins-bold(2.25rem, 3rem, $letter-spacing-standard);
+@mixin h1 {
+  @include poppins-semi-bold;
+  font-size: 2.25rem;
+  line-height: 3rem;
 }
 
-@mixin h2() {
-  @include poppins-bold(1.5rem, 2.1rem, $letter-spacing-standard);
+@mixin h2 {
+  @include poppins-semi-bold;
+  font-size: 1.5rem;
+  line-height: 2.1rem;
 }
 
-@mixin h3() {
-  @include poppins-bold(1.25rem, 1.75rem, $letter-spacing-standard);
+@mixin h3 {
+  @include poppins-semi-bold;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
-@mixin h4() {
-  @include poppins-bold(1rem, 1.4rem, $letter-spacing-small);
+@mixin h4 {
+  @include poppins-semi-bold;
+  font-size: 1rem;
+  line-height: 1.4rem;
 }
 
-@mixin body-bold() {
+@mixin body-bold {
   @include body();
   font-weight: bold;
 }
 
-@mixin tiny() {
-  @include open-sans(0.85rem, 1.3rem);
+@mixin tiny {
+  @include open-sans-light;
+  font-size: 0.85rem;
+  line-height: 1.3rem;
 }
 
-@mixin tiny-bold() {
-  @include tiny();
-  font-weight: bold;
+@mixin tiny-bold {
+  @include tiny;
+  font-weight: 700;
 }

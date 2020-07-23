@@ -1,6 +1,6 @@
-@import "../variables/colors";
-@import "../variables/misc";
-@import "paddings";
+@import '../variables/colors';
+@import '../variables/bases';
+@import 'spacing';
 
 @mixin mtx-btn-variant(
   $name,

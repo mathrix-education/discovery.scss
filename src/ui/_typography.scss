@@ -1,0 +1,5 @@
+@import '../mixins/typography';
+
+body {
+  @include open-sans(16px);
+}

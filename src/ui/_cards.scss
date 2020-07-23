@@ -1,0 +1,10 @@
+@import '../mixins/borders';
+@import '../mixins/spacing';
+
+.card {
+  display: block;
+  @include padding(2);
+  box-shadow: 5px 0 30px rgba(185, 213, 208, 0.5);;
+  background: white;
+  @include border-radius(2);
+}

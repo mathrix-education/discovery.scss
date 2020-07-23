@@ -1,0 +1,131 @@
+@import '../variables/bases';
+@import 'math';
+
+/**
+ * Margin mixins
+ */
+@mixin margin($i, $important: false) {
+  @if $important {
+    margin: pow($base-space, $i) !important;
+  } @else {
+    margin: pow($base-space, $i);
+  }
+}
+
+@mixin margin-top($i, $important: false) {
+  @if $important {
+    margin-top: pow($base-space, $i) !important;
+  } @else {
+    margin-top: pow($base-space, $i);
+  }
+}
+
+@mixin margin-bottom($i, $important: false) {
+  @if $important {
+    margin-top: pow($base-space, $i) !important;
+  } @else {
+    margin-top: pow($base-space, $i);
+  }
+}
+
+@mixin margin-left($i, $important: false) {
+  @if $important {
+    margin-left: pow($base-space, $i) !important
+  } @else {
+    margin-left: pow($base-space, $i);
+  }
+}
+
+@mixin margin-right($i, $important: false) {
+  @if $important {
+    margin-right: pow($base-space, $i) !important;
+  } @else {
+    margin-right: pow($base-space, $i);
+  }
+}
+
+@mixin margin-y($i, $important: false) {
+  @include margin-top($i, $important);
+  @include margin-bottom($i, $important);
+}
+
+@mixin margin-x($i, $important: false) {
+  @include margin-left($i, $important);
+  @include margin-right($i, $important);
+}
+
+@mixin margin-auto($important: false) {
+  @if $important {
+    margin: auto !important;
+  } @else {
+    margin: auto;
+  }
+}
+
+@mixin margin-x-auto($important: false) {
+  @if $important {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  } @else {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@mixin margin-y-auto($important: false) {
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+/**
+ * Padding mixins
+ */
+@mixin padding($i, $important: false) {
+  @if $important {
+    padding: pow($base-space, $i) !important;
+  } @else {
+    padding: pow($base-space, $i);
+  }
+}
+
+@mixin padding-top($i, $important: false) {
+  @if $important {
+    padding-top: pow($base-space, $i) !important;
+  } @else {
+    padding-top: pow($base-space, $i);
+  }
+}
+
+@mixin padding-bottom($i, $important: false) {
+  @if $important {
+    padding-top: pow($base-space, $i) !important;
+  } @else {
+    padding-top: pow($base-space, $i);
+  }
+}
+
+@mixin padding-left($i, $important: false) {
+  @if $important {
+    padding-left: pow($base-space, $i) !important
+  } @else {
+    padding-left: pow($base-space, $i);
+  }
+}
+
+@mixin padding-right($i, $important: false) {
+  @if $important {
+    padding-right: pow($base-space, $i) !important;
+  } @else {
+    padding-right: pow($base-space, $i);
+  }
+}
+
+@mixin padding-y($i, $important: false) {
+  @include padding-top($i, $important);
+  @include padding-bottom($i, $important);
+}
+
+@mixin padding-x($i, $important: false) {
+  @include padding-left($i, $important);
+  @include padding-right($i, $important);
+}

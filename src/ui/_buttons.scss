@@ -1,9 +1,9 @@
-@import "../mixins/fonts";
-@import "../mixins/borders";
-@import "../mixins/paddings";
-@import "../variables/misc";
+@import '../mixins/typography';
+@import '../mixins/borders';
+@import '../mixins/spacing';
+@import '../variables/bases';
 
-.mtx-btn {
+.btn {
   display: inline-block;
   cursor: pointer;
   @include poppins(14px, 24px, $letter-spacing-small);

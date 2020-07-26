@@ -10,8 +10,8 @@
   $color-active: $color,
   $background-color-active: $background-color,
   $border-color-active: $border-color,
-  $color-disabled: $gray-disabled,
-  $background-color-disabled: $gray-title-disabled,
+  $color-disabled: $gray-title-disabled,
+  $background-color-disabled: $gray-disabled,
   $border-color-disabled: $gray-disabled,
 ) {
   .btn.btn-#{$name} {

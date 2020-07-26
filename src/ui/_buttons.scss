@@ -6,7 +6,10 @@
 .btn {
   display: inline-block;
   cursor: pointer;
-  @include poppins(14px, 24px, $letter-spacing-small);
+  @include poppins;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: $letter-spacing-small;
   @include border-radius(1);
   transition: $transition;
   @include padding-y(1);
